@@ -1,0 +1,13 @@
+{
+    "name": "Almacen",
+    "alias": "almacen",
+    "description": "Módulo de gestión de inventario y almacén",
+    "keywords": [],
+    "priority": 2,
+    "providers": [
+        "Modules\\Almacen\\Providers\\AlmacenServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Despacho",
+    "alias": "despacho",
+    "description": "Módulo de gestión de despachos y entregas",
+    "keywords": [],
+    "priority": 3,
+    "providers": [
+        "Modules\\Despacho\\Providers\\DespachoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

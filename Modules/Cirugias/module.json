@@ -1,0 +1,13 @@
+{
+    "name": "Cirugias",
+    "alias": "cirugias",
+    "description": "Módulo de gestión de cirugías",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\Cirugias\\Providers\\CirugiasServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

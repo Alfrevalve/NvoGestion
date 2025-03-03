@@ -1,0 +1,179 @@
+:root {
+    --primary: #0F3061;
+    --secondary: #0097CD;
+    --accent: #65D7CA;
+    --light-accent: #AAE9E2;
+}
+
+/* Colores de Texto */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0a264d;
+    border-color: #0a264d;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #0082b4;
+    border-color: #0082b4;
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+.btn-accent:hover, .btn-accent:focus {
+    background-color: #54c6b9;
+    border-color: #54c6b9;
+    color: white;
+}
+
+/* Badges */
+.badge-primary {
+    background-color: var(--primary);
+}
+
+.badge-secondary {
+    background-color: var(--secondary);
+}
+
+.badge-accent {
+    background-color: var(--accent);
+}
+
+/* Cards */
+.card-primary.card-outline {
+    border-top: 3px solid var(--primary);
+}
+
+.card-secondary.card-outline {
+    border-top: 3px solid var(--secondary);
+}
+
+.card-accent.card-outline {
+    border-top: 3px solid var(--accent);
+}
+
+/* Sidebar */
+.sidebar-dark-navy {
+    background: var(--primary);
+    background: linear-gradient(180deg, var(--primary) 10%, #0a264d 100%);
+}
+
+.sidebar-dark-navy .nav-item .nav-link.active {
+    background-color: rgba(255,255,255,0.1);
+    border-left: 4px solid var(--accent);
+}
+
+.sidebar-dark-navy .nav-item .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-left: 4px solid var(--secondary);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 151, 205, 0.25);
+}
+
+/* Tables */
+.table-hover tbody tr:hover {
+    background-color: rgba(170, 233, 226, 0.1);
+}
+
+/* Estado de Cirugías */
+.estado-pendiente {
+    background-color: var(--primary) !important;
+    color: white;
+}
+
+.estado-programada {
+    background-color: var(--secondary) !important;
+    color: white;
+}
+
+.estado-en-proceso {
+    background-color: var(--accent) !important;
+    color: white;
+}
+
+.estado-finalizada {
+    background-color: var(--light-accent) !important;
+    color: #333;
+}
+
+/* Calendario */
+.fc-event {
+    border: none;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+}
+
+.fc-event.prioridad-baja {
+    border-left: 4px solid #28a745;
+}
+
+.fc-event.prioridad-media {
+    border-left: 4px solid var(--secondary);
+}
+
+.fc-event.prioridad-alta {
+    border-left: 4px solid #fd7e14;
+}
+
+.fc-event.prioridad-urgente {
+    border-left: 4px solid #dc3545;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Personalización de Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}

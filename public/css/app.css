@@ -1,0 +1,232 @@
+:root {
+    --sidebar-width: 250px;
+    --header-height: 60px;
+    --primary-color: #4e73df;
+    --secondary-color: #2e59d9;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #4e73df;
+    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    color: white;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-brand {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-nav {
+    padding-top: 1rem;
+}
+
+.sidebar-heading {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    color: white;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link i {
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    width: 1.25rem;
+    text-align: center;
+}
+
+.content-wrapper {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
+
+.header {
+    height: var(--header-height);
+    background-color: white;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.toggle-sidebar {
+    background: none;
+    border: none;
+    color: #4e73df;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #5a5c69;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    color: #858796;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4e73df;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.main-content {
+    padding: 1.5rem;
+}
+
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    border: none;
+    border-radius: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    color: #4e73df;
+}
+
+.sidebar-toggled .sidebar {
+    width: 6.5rem;
+}
+
+.sidebar-toggled .content-wrapper {
+    margin-left: 6.5rem;
+}
+
+.sidebar-toggled .sidebar-brand {
+    padding: 1rem;
+}
+
+.sidebar-toggled .sidebar-brand-text {
+    display: none;
+}
+
+.sidebar-toggled .nav-item .nav-link span {
+    display: none;
+}
+
+.sidebar-toggled .nav-item .nav-link {
+    text-align: center;
+    padding: 0.75rem 1rem;
+}
+
+.sidebar-toggled .nav-item .nav-link i {
+    margin-right: 0;
+    font-size: 1.25rem;
+}
+
+.sidebar-toggled .sidebar-heading {
+    text-align: center;
+    padding: 0.75rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+    }
+    
+    .content-wrapper {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggled .sidebar {
+        width: var(--sidebar-width);
+    }
+    
+    .sidebar-toggled .content-wrapper {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggled .nav-item .nav-link span {
+        display: inline;
+    }
+    
+    .sidebar-toggled .sidebar-brand-text {
+        display: inline;
+    }
+    
+    .sidebar-toggled .nav-item .nav-link {
+        text-align: left;
+        padding: 0.75rem 1rem;
+    }
+    
+    .sidebar-toggled .nav-item .nav-link i {
+        margin-right: 0.75rem;
+        font-size: 1rem;
+    }
+    
+    .sidebar-toggled .sidebar-heading {
+        text-align: left;
+    }
+}

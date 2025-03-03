@@ -1,0 +1,13 @@
+{
+    "name": "Administracion",
+    "alias": "administracion",
+    "description": "Módulo de administración del sistema",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Administracion\\Providers\\AdministracionServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

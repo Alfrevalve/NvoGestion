@@ -1,0 +1,62 @@
+/* Table styles */
+.table td {
+    vertical-align: middle !important;
+}
+
+/* Badge styles */
+.badge {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Button styles */
+.btn-group .btn {
+    margin-right: 4px;
+}
+
+.btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+/* Stock warning styles */
+tr.stock-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Card header styles */
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-header .btn-primary {
+    background-color: white;
+    color: #007bff;
+    border: none;
+}
+
+/* Table header styles */
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Action buttons */
+.btn-info {
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-danger {
+    padding: 0.25rem 0.5rem;
+}
