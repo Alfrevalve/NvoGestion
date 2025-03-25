@@ -3,8 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Editar Cirugía</h1>
-    <form action="{{ route('cirugias.update', $cirugia->id) }}" method="POST">
-        @csrf
+<form action="{{ route('modulo.cirugias.update', $cirugia->id) }}" method="POST">        @csrf
         @method('PUT')
         <div class="form-group">
             <label for="fecha">Fecha</label>

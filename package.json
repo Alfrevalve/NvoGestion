@@ -6,18 +6,23 @@
         "dev": "vite"
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.20",
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
         "axios": "^1.7.4",
-        "chart.js": "^4.4.1",
+        "chart.js": "^4.4.8",
         "concurrently": "^9.0.1",
         "fullcalendar": "^6.1.11",
         "laravel-vite-plugin": "^1.2.0",
-        "postcss": "^8.5.3",
-        "tailwindcss": "^3.4.17",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.1.0",
         "vite": "^6.0.11"
     },
     "dependencies": {
         "@fullcalendar/core": "^6.1.15",
-        "@fullcalendar/daygrid": "^6.1.15"
+        "@fullcalendar/daygrid": "^6.1.15",
+        "@popperjs/core": "^2.11.8",
+        "bootstrap": "5.3",
+        "jquery": "^3.7.1"
     }
 }

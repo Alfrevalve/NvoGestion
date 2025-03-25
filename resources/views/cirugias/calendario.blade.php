@@ -2,5 +2,16 @@
 
 @section('content')
     <h1>Calendario de Cirugías</h1>
-    <p>Bienvenido al calendario de cirugías. Aquí se mostrarán las cirugías programadas.</p>
+    <div id='calendar'></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: @json($eventos) // Pasar los eventos desde el controlador
+            });
+            calendar.render();
+        });
+    </script>
 @endsection

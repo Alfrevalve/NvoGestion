@@ -1,0 +1,24 @@
+[10-Mar-2025 00:30:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/alfreval/public_html/NvoGestion/database/migrations/2024_03_01_000001_unificado.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/database/migrations/2024_03_01_000001_unificado.php on line 8
+[10-Mar-2025 01:24:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/alfreval/public_html/NvoGestion/database/migrations/0001_01_01_000002_create_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/database/migrations/0001_01_01_000002_create_jobs_table.php on line 7
+[10-Mar-2025 01:25:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/alfreval/public_html/NvoGestion/database/migrations/0001_01_01_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/database/migrations/0001_01_01_000000_create_users_table.php on line 7
+[10-Mar-2025 04:35:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/alfreval/public_html/NvoGestion/database/migrations/2024_03_01_000001_create_actividades_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/database/migrations/2024_03_01_000001_create_actividades_table.php on line 7
+[10-Mar-2025 10:19:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/alfreval/public_html/NvoGestion/database/migrations/2025_02_21_044023_create_permission_tables.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/database/migrations/2025_02_21_044023_create_permission_tables.php on line 8
+[10-Mar-2025 10:20:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/alfreval/public_html/NvoGestion/database/migrations/0001_01_01_000001_create_cache_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/database/migrations/0001_01_01_000001_create_cache_table.php on line 7

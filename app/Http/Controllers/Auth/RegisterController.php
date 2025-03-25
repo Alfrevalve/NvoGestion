@@ -13,7 +13,7 @@ use Illuminate\Validation\Rules;
 class RegisterController extends Controller
 {
     /**
-     * Muestra el formulario de registro
+     * Muestra el formulario de registro.
      */
     public function showRegistrationForm()
     {
@@ -21,14 +21,14 @@ class RegisterController extends Controller
     }
 
     /**
-     * Procesa el formulario de registro
+     * Procesa el formulario de registro.
      */
     public function register(Request $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        $request->validate([ // Valida los datos del formulario
+            'name' => ['required', 'string', 'max:255'], // El nombre es requerido y debe ser una cadena
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'], // El email es requerido, debe ser único y válido
+            'password' => ['required', 'confirmed', Rules\Password::defaults()], // La contraseña es requerida y debe ser confirmada
         ]);
 
         $user = User::create([
@@ -37,13 +37,13 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Asignar rol básico de usuario
+        // Asignar rol básico de usuario.
         $user->assignRole('usuario');
 
-        event(new Registered($user));
+        event(new Registered($user)); // Dispara el evento de registro.
 
-        Auth::login($user);
+        Auth::login($user); // Autentica al usuario.
 
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard'); // Redirige a la página de destino.
     }
 }

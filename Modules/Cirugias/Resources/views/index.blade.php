@@ -48,8 +48,8 @@
                                     <td>{{ $cirugia->institucion->nombre ?? 'No asignada' }}</td>
                                     <td>
                                         <span class="badge badge-{{ $cirugia->estado == 'pendiente' ? 'primary' :
-                                                             ($cirugia->estado == 'programada' ? 'info' :
-                                                             ($cirugia->estado == 'en proceso' ? 'warning' : 'success')) }}">
+    ($cirugia->estado == 'programada' ? 'info' :
+    ($cirugia->estado == 'en proceso' ? 'warning' : 'success')) }}">
                                             {{ ucfirst($cirugia->estado) }}
                                         </span>
                                     </td>
@@ -101,4 +101,4 @@
     <script>
         // Aquí puedes agregar JavaScript personalizado
     </script>
-@stop
+</stop>

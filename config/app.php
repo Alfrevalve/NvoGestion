@@ -183,11 +183,10 @@ return [
         /*
          * Package Service Providers...
          */
-        Nwidart\Modules\LaravelModulesServiceProvider::class,
-        Modules\Cirugias\Providers\CirugiasServiceProvider::class,
-        Modules\Almacen\Providers\AlmacenServiceProvider::class,
-        Modules\Despacho\Providers\DespachoServiceProvider::class,
-        Modules\Administracion\Providers\AdministracionServiceProvider::class,
+        // Modules\Cirugias\Providers\CirugiasServiceProvider::class,
+        // Modules\Almacen\Providers\AlmacenServiceProvider::class,
+        // Modules\Despacho\Providers\DespachoServiceProvider::class,
+        // Modules\Administracion\Providers\AdministracionServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -198,8 +197,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        // Módulos
-        Nwidart\Modules\LaravelModulesServiceProvider::class,
 
     ],
 
@@ -255,8 +252,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        // Módulos
-        'Module' => Nwidart\Modules\Facades\Module::class,
     ],
 
 ];

@@ -14,6 +14,11 @@ return [
     ],
 
     'channels' => [
+        'user_activity' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/user_activity.log'),
+            'level' => 'info',
+        ],
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],

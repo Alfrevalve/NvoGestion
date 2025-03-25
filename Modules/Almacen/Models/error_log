@@ -1,0 +1,16 @@
+[09-Mar-2025 00:05:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/MovimientoInventario.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/MovimientoInventario.php on line 9
+[09-Mar-2025 00:07:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/Categoria.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/Categoria.php on line 8
+[09-Mar-2025 11:53:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/Inventario.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/Inventario.php on line 8
+[09-Mar-2025 18:14:41 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/Proveedor.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Models/Proveedor.php on line 9

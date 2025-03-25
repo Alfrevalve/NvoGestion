@@ -10,6 +10,15 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        // Estadísticas de Equipos
+        $totalEquipos = $this->getTotalEquipos();
+
+        // Estadísticas de Instituciones
+        $totalInstituciones = $this->getTotalInstituciones();
+
+        // Estadísticas de Instrumentistas
+        $totalInstrumentistas = $this->getTotalInstrumentistas();
+
         // Estadísticas de Cirugías
         $cirugiasPendientes = $this->getCirugiasPendientes();
         $cirugiasCompletadas = $this->getCirugiasCompletadas();
@@ -38,6 +47,9 @@ class DashboardController extends Controller
             });
 
         return view('dashboard', compact(
+            'totalEquipos',
+            'totalInstituciones',
+            'totalInstrumentistas',
             'cirugiasPendientes',
             'cirugiasCompletadas',
             'stockBajo',
@@ -45,6 +57,33 @@ class DashboardController extends Controller
             'eventos',
             'actividades'
         ));
+    }
+
+    private function getTotalEquipos()
+    {
+        try {
+            return app('Modules\Cirugias\Models\Equipo')::count();
+        } catch (\Exception $e) {
+            return 0;
+        }
+    }
+
+    private function getTotalInstituciones()
+    {
+        try {
+            return app('Modules\Cirugias\Models\Institucion')::count();
+        } catch (\Exception $e) {
+            return 0;
+        }
+    }
+
+    private function getTotalInstrumentistas()
+    {
+        try {
+            return app('Modules\Cirugias\Models\Instrumentista')::count();
+        } catch (\Exception $e) {
+            return 0;
+        }
     }
 
     private function getCirugiasPendientes()

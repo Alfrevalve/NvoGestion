@@ -11,12 +11,15 @@
 
         <h2>Lista de Cirugías</h2>
         <ul>
-            @foreach ($surgeries as $surgery)
+            @foreach ($cirugias as $surgery)
                 <li>
                     <strong>{{ $surgery->nombre }}</strong> - Fecha: {{ $surgery->fecha }} - Hora: {{ $surgery->hora }}
                 </li>
             @endforeach
         </ul>
+
+        <!-- Pagination Controls -->
+        {{ $cirugias->links() }}
     </div>
 
     <script>

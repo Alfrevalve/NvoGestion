@@ -1,0 +1,12 @@
+[13-Mar-2025 12:18:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Cookie\Middleware\EncryptCookies" not found in /home/alfreval/public_html/NvoGestion/app/Http/Middleware/EncryptCookies.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/app/Http/Middleware/EncryptCookies.php on line 7
+[13-Mar-2025 14:56:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Http\Middleware\TrimStrings" not found in /home/alfreval/public_html/NvoGestion/app/Http/Middleware/TrimStrings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/app/Http/Middleware/TrimStrings.php on line 7
+[13-Mar-2025 20:19:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Auth\Middleware\Authenticate" not found in /home/alfreval/public_html/NvoGestion/app/Http/Middleware/Authenticate.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/app/Http/Middleware/Authenticate.php on line 8

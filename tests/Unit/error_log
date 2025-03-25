@@ -1,0 +1,36 @@
+[08-Mar-2025 01:58:07 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/MaterialTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/MaterialTest.php on line 8
+[08-Mar-2025 04:06:50 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/InstitucionTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/InstitucionTest.php on line 8
+[08-Mar-2025 09:39:26 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/MedicoTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/MedicoTest.php on line 8
+[08-Mar-2025 12:01:53 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/EquipoTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/EquipoTest.php on line 8
+[08-Mar-2025 12:03:34 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/CirugiaTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/CirugiaTest.php on line 8
+[09-Mar-2025 11:47:39 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/InstrumentistaTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/InstrumentistaTest.php on line 8
+[13-Mar-2025 06:30:12 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/MaterialTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/MaterialTest.php on line 8
+[13-Mar-2025 12:14:52 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/MedicoTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/MedicoTest.php on line 8
+[14-Mar-2025 01:35:45 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Unit/EquipoTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Unit/EquipoTest.php on line 8

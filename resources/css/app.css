@@ -1,39 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(-25%);
-        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }
-    50% {
-        transform: translateY(0);
-        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Color de fondo claro */
+    color: #0F3061; /* Color de texto primario */
 }
 
-.animate-bounce {
-    animation: bounce 1s infinite;
+.sidebar {
+    background-color: #0F3061; /* Color primario para la barra lateral */
+    color: white; /* Color de texto en la barra lateral */
 }
 
-.animation-delay-100 {
-    animation-delay: 0.1s;
+.navbar {
+    background-color: #0097CD; /* Color secundario para la barra de navegación */
+    color: white; /* Color de texto en la barra de navegación */
 }
 
-.animation-delay-200 {
-    animation-delay: 0.2s;
+.login-container {
+    background-color: #E5F8F6; /* Color de fondo para el contenedor de inicio de sesión */
+    padding: 20px;
+    border-radius: 5px;
 }
 
-@keyframes progress {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
+button {
+    background-color: #0097CD; /* Color secundario para botones */
+    color: white; /* Color de texto en botones */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.progress-animate {
-    animation: progress 2s ease-in-out;
+button:hover {
+    background-color: #65D7CA; /* Color de acento para hover en botones */
 }

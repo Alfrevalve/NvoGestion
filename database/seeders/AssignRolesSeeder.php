@@ -12,7 +12,7 @@ class AssignRolesSeeder extends Seeder
     {
         // Crear usuario super-admin si no existe
         $admin = User::firstOrCreate(
-            ['email' => 'admin@nvogestion.com'],
+            ['email' => 'jesus.valera@biomedsac.com.pe'],
             [
                 'name' => 'Administrador',
                 'password' => Hash::make('admin123'),

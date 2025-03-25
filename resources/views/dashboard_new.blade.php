@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
 <div class="container-fluid">
     <div class="row">
         <!-- Estadísticas -->
@@ -93,24 +95,8 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            locale: 'es',
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            events: @json($eventos),
-            eventClick: function(info) {
-                window.location.href = `/modulo-cirugias/${info.event.id}`;
-            }
-        });
-        calendar.render();
-    });
-</script>
+    <script>
+        var eventos = @json($eventos); // Pasar eventos desde la vista
+    </script>
+    <script src="/js/calendar-init.js"></script>
 @endsection

@@ -1,0 +1,12 @@
+[08-Mar-2025 03:14:44 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Feature/DespachoTest.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Feature/DespachoTest.php on line 9
+[08-Mar-2025 12:41:03 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Feature/AlmacenTest.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Feature/AlmacenTest.php on line 9
+[13-Mar-2025 03:03:32 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/alfreval/public_html/NvoGestion/tests/Feature/ReporteCirugiaTest.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/tests/Feature/ReporteCirugiaTest.php on line 9

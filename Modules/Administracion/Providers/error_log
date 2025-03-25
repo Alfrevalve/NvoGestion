@@ -1,0 +1,4 @@
+[09-Mar-2025 05:41:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Support\Providers\RouteServiceProvider" not found in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Providers/RouteServiceProvider.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Providers/RouteServiceProvider.php on line 8

@@ -1,0 +1,4 @@
+[09-Mar-2025 11:54:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/AlmacenServiceProvider.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/AlmacenServiceProvider.php on line 7

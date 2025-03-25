@@ -1,0 +1,18 @@
+[03-Mar-2025 15:23:57 UTC] PHP Warning:  require(/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[03-Mar-2025 15:23:57 UTC] PHP Warning:  require(/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[03-Mar-2025 15:23:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/alfreval/public_html/NvoGestion/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[05-Mar-2025 08:39:19 UTC] PHP Warning:  require(/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[05-Mar-2025 08:39:19 UTC] PHP Warning:  require(/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[05-Mar-2025 08:39:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/alfreval/public_html/NvoGestion/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[11-Mar-2025 13:51:32 UTC] PHP Warning:  require(/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[11-Mar-2025 13:51:32 UTC] PHP Warning:  require(/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/alfreval/public_html/NvoGestion/public/index.php on line 14
+[11-Mar-2025 13:51:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/alfreval/public_html/NvoGestion/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/alfreval/public_html/NvoGestion/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/public/index.php on line 14

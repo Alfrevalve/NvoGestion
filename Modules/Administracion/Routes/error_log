@@ -1,0 +1,8 @@
+[08-Mar-2025 22:02:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Routes/api.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Routes/api.php on line 13
+[09-Mar-2025 00:10:21 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Routes/web.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Routes/web.php on line 12

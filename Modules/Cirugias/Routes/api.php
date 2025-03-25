@@ -17,6 +17,14 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // API endpoints para Cirugías
     Route::apiResource('cirugias', CirugiaController::class);
+    Route::put('cirugias/{id}', [CirugiaController::class, 'update'])->name('cirugias.update');
+    Route::get('cirugias/filtered', [CirugiaController::class, 'filtered']);
+
+    // Temporary test route
+    Route::get('cirugias/test', function() {
+        return response()->json(['status' => 'La ruta funciona']);
+    });
+
     Route::get('calendario/eventos', [CalendarioController::class, 'eventos']);
     Route::get('kanban/estados', [KanbanController::class, 'estados']);
     Route::get('instituciones', [InstitucionController::class, 'index']);

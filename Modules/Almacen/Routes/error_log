@@ -1,0 +1,8 @@
+[08-Mar-2025 21:20:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Routes/api.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Routes/api.php on line 10
+[09-Mar-2025 17:34:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Routes/web.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/Modules/Almacen/Routes/web.php on line 9

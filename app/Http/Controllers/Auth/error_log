@@ -1,0 +1,12 @@
+[10-Mar-2025 14:45:44 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/alfreval/public_html/NvoGestion/app/Http/Controllers/Auth/LoginController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/app/Http/Controllers/Auth/LoginController.php on line 9
+[10-Mar-2025 21:06:27 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/alfreval/public_html/NvoGestion/app/Http/Controllers/Auth/ForgotPasswordController.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/app/Http/Controllers/Auth/ForgotPasswordController.php on line 12
+[12-Mar-2025 17:08:33 UTC] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/alfreval/public_html/NvoGestion/app/Http/Controllers/Auth/RegisterController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/alfreval/public_html/NvoGestion/app/Http/Controllers/Auth/RegisterController.php on line 13

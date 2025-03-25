@@ -10,6 +10,22 @@
     color: var(--primary) !important;
 }
 
+/* Estilos para FullCalendar */
+.fc {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.fc-daygrid-event {
+    background-color: var(--primary);
+    border: none;
+    color: white;
+}
+
+.fc-daygrid-event:hover {
+    background-color: var(--secondary);
+}
+
 .text-secondary {
     color: var(--secondary) !important;
 }

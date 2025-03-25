@@ -1,3 +1,5 @@
+import './calendar-init.js'; // Importar el archivo de inicialización del calendario
+
 // Configuración global de SweetAlert2
 const Toast = Swal.mixin({
     toast: true,
