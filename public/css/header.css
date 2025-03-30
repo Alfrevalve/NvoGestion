@@ -1,0 +1,219 @@
+/* 
+ * Enhanced Header/Navbar Styling for NvoGestion
+ * Additional styles to complement custom.css
+ */
+
+/* Header Base Styles */
+.header {
+    height: var(--header-height, 60px);
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--container-padding, 1.5rem);
+    margin-bottom: var(--spacing-lg, 1.5rem);
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Sidebar Toggle Button */
+.header .sidebar-toggle {
+    width: 36px;
+    height: 36px;
+    background-color: var(--gray-100, #f8f9fa);
+    color: var(--gray-700, #495057);
+    border: none;
+    transition: all 0.15s ease-in-out;
+}
+
+.header .sidebar-toggle:hover {
+    background-color: var(--gray-200, #e9ecef);
+    color: var(--primary-color, #0F3061);
+}
+
+/* Breadcrumbs */
+.breadcrumb-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-wrapper nav ol {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-wrapper nav ol li {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--gray-600, #6c757d);
+}
+
+.breadcrumb-wrapper nav ol li:not(:first-child)::before {
+    content: '/';
+    padding: 0 0.5rem;
+    color: var(--gray-400, #ced4da);
+}
+
+.breadcrumb-wrapper nav ol li a {
+    color: var(--gray-600, #6c757d);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+.breadcrumb-wrapper nav ol li a:hover {
+    color: var(--primary-color, #0F3061);
+    text-decoration: none;
+}
+
+.breadcrumb-wrapper nav ol li.active {
+    color: var(--gray-800, #343a40);
+    font-weight: 500;
+}
+
+/* Search Form */
+.search-form .form-control {
+    height: 36px;
+    background-color: var(--gray-100, #f8f9fa);
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.search-form .form-control:focus {
+    background-color: white;
+    border-color: var(--gray-300, #dee2e6);
+    box-shadow: none;
+}
+
+.search-form .btn {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Notification Badge */
+.header .badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.2rem 0.4rem;
+    min-width: 18px;
+    height: 18px;
+}
+
+/* Avatar */
+.avatar {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.avatar.bg-light-primary {
+    background-color: rgba(15, 48, 97, 0.1);
+}
+
+.avatar.bg-light-success {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.avatar.bg-light-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.avatar.bg-light-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.avatar.bg-light-info {
+    background-color: rgba(23, 162, 184, 0.1);
+}
+
+/* Dropdown Styling */
+.header .dropdown-toggle {
+    border: none;
+    background-color: transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.header .dropdown-toggle:hover {
+    background-color: var(--gray-100, #f8f9fa);
+}
+
+.header .dropdown-toggle::after {
+    display: none;
+}
+
+.header .dropdown-menu {
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.header .dropdown-header {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--gray-200, #e9ecef);
+}
+
+.header .dropdown-body {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.header .dropdown-item {
+    padding: 0.625rem 1rem;
+    color: var(--gray-700, #495057);
+    transition: all 0.15s ease-in-out;
+}
+
+.header .dropdown-item:hover {
+    background-color: var(--gray-100, #f8f9fa);
+    color: var(--gray-900, #212529);
+}
+
+.header .dropdown-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.header .dropdown-footer {
+    padding: 0.625rem 1rem;
+    background-color: var(--gray-50, #f9fafb);
+    border-top: 1px solid var(--gray-200, #e9ecef);
+}
+
+/* User Dropdown */
+.header .btn-sm.rounded-pill {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    height: 36px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 var(--spacing-md, 1rem);
+    }
+    
+    .header .d-none.d-md-block {
+        display: none !important;
+    }
+    
+    .header .btn-sm.rounded-pill span {
+        display: none;
+    }
+}

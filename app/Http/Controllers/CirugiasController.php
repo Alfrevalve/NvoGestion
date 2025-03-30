@@ -58,4 +58,24 @@ class CirugiasController extends Controller
                 return '#6c757d'; // Gris
         }
     }
+    
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        // Validar los datos del formulario
+        $validatedData = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'fecha' => 'required|date',
+            'estado' => 'required|string|in:programada,realizada,cancelada',
+        ]);
+        
+        // Crear una nueva cirugía
+        $cirugia = Cirugia::create($validatedData);
+        
+        // Redireccionar a la lista de cirugías con un mensaje de éxito
+        return redirect()->route('cirugias.index')
+                         ->with('success', 'Cirugía creada correctamente');
+    }
 }

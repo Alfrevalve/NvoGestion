@@ -1,27 +1,75 @@
-@extends('layouts.app')
+@extends('layouts.sidebar-pro')
 
 @section('content')
-<div class="container">
-    <h1>Crear Nueva Cirugía</h1>
-    <form action="{{ route('modulo.cirugias.store') }}" method="POST">
-        @csrf
-        <div class="form-group">
-            <label for="nombre">Nombre de la Cirugía</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
+<div class="container-fluid">
+    <h1 class="mt-4">Crear Nueva Cirugía</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-plus me-1"></i>
+            Nueva Cirugía
         </div>
-        <div class="form-group">
-            <label for="fecha">Fecha</label>
-            <input type="date" class="form-control" id="fecha" name="fecha" required>
+        <div class="card-body">
+            <form action="{{ route('cirugias.store') }}" method="POST" novalidate>
+                @csrf
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre de la Cirugía</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <button type="submit" class="btn btn-success">Guardar</button>
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-2">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if (session('success'))
+                    <div class="alert alert-success mt-2">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-2">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-2">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if (session('success'))
+                    <div class="alert alert-success mt-2">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @csrf
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre de la Cirugía</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <button type="submit" class="btn btn-success">Guardar</button>
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-2">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </form>
         </div>
-        <div class="form-group">
-            <label for="estado">Estado</label>
-            <select class="form-control" id="estado" name="estado" required>
-                <option value="programada">Programada</option>
-                <option value="realizada">Realizada</option>
-                <option value="cancelada">Cancelada</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Crear Cirugía</button>
-    </form>
+    </div>
 </div>
 @endsection

@@ -1,4 +1,0 @@
-[09-Mar-2025 18:38:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\ServiceProvider" not found in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Module.php:8
-Stack trace:
-#0 {main}
-  thrown in /home/alfreval/public_html/NvoGestion/Modules/Administracion/Module.php on line 8

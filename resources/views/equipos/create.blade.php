@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Crear Nuevo Equipo</h1>
-    <form action="{{ route('modulo.equipos.store') }}" method="POST">
+    <form action="{{ route('equipos.store') }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="nombre">Nombre del Equipo</label>

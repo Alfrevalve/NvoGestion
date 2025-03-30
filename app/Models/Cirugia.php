@@ -9,9 +9,10 @@ class Cirugia extends Model
 {
     use HasFactory;
 
-    protected $table = 'cirugias'; // Nombre correcto de la tabla
+    protected $table = 'cirugias';
 
     protected $fillable = [
+        'tipo',
         'status_actual',
         'ultima_actualizacion',
         'notas_seguimiento',
@@ -26,5 +27,6 @@ class Cirugia extends Model
         'prioridad',
         'duracion_estimada',
         'observaciones',
+        'nombre',
     ];
 }

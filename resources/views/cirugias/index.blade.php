@@ -1,48 +1,35 @@
-@extends('layouts.app')
+@extends('layouts.sidebar-pro')
 
 @section('content')
-    <div class="container">
-        <h1>Cantidad de Cirugías Mensuales</h1>
-        <div id="monthly-surgeries">
-            <p>Total de cirugías este mes: {{ $totalSurgeriesCurrentMonth }}</p>
-            <p>Total de cirugías el mes pasado: {{ $totalSurgeriesLastMonth }}</p>
-            <canvas id="surgeriesChart"></canvas>
+<div class="container-fluid">
+    <h1 class="mt-4">Listado de Cirugías</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Cirugías
         </div>
-
-        <h2>Lista de Cirugías</h2>
-        <ul>
-            @foreach ($cirugias as $surgery)
-                <li>
-                    <strong>{{ $surgery->nombre }}</strong> - Fecha: {{ $surgery->fecha }} - Hora: {{ $surgery->hora }}
-                </li>
-            @endforeach
-        </ul>
-
-        <!-- Pagination Controls -->
-        {{ $cirugias->links() }}
+        <div class="card-body">
+            <!-- Aquí puedes agregar la lógica para mostrar la lista de cirugías -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de fila -->
+                    <tr>
+                        <td>1</td>
+                        <td>Cirugía de Ejemplo</td>
+                        <td>
+                            <a href="{{ route('cirugias.edit', 1) }}" class="btn btn-primary">Editar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    <script>
-        const ctx = document.getElementById('surgeriesChart').getContext('2d');
-        const surgeriesChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Mes Actual', 'Mes Anterior'],
-                datasets: [{
-                    label: 'Cantidad de Cirugías',
-                    data: [{{ $totalSurgeriesCurrentMonth }}, {{ $totalSurgeriesLastMonth }}],
-                    backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 99, 132, 0.2)'],
-                    borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
+</div>
 @endsection

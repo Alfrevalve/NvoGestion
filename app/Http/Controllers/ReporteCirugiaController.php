@@ -38,11 +38,21 @@ class ReporteCirugiaController extends Controller
 
         // Logic to generate the report based on the validated input
         $reports = ReporteCirugia::whereBetween('fecha', [
-            'estado' => $validated['estado'],
-            'prioridad' => $validated['prioridad'],
-            Carbon::parse($validated['fecha_inicio']), 
+            Carbon::parse($validated['fecha_inicio']),
             Carbon::parse($validated['fecha_fin'])
         ]);
+
+        if (!empty($validated['estado'])) {
+            $reports->where('estado', $validated['estado']);
+        }
+
+        if (!empty($validated['prioridad'])) {
+            $reports->where('prioridad', $validated['prioridad']);
+        }
+
+        if (!empty($validated['tipo_cirugia'])) {
+            $reports->where('tipo_cirugia', $validated['tipo_cirugia']);
+        }
 
         if (!empty($validated['tipo_cirugia'])) {
             $reports->where('tipo_cirugia', $validated['tipo_cirugia']);
