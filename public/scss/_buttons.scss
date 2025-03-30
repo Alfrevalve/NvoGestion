@@ -25,7 +25,7 @@
   align-items: stretch;
   justify-content: center;
   .icon {
-    background: fade-out($black, .85);
+    background: $black; // Changed from fade-out to solid color
     display: inline-block;
     padding: $btn-padding-y $btn-padding-x;
   }
@@ -48,5 +48,30 @@
     .text {
       padding: $btn-padding-y-lg $btn-padding-x-lg;
     }
-  }
+}
+
+// Updated button styles for brand colors
+.btn-primary {
+  background-color: $color-primario !important;
+  border-color: $color-primario !important;
+}
+
+.btn-secondary {
+  background-color: $color-secundario !important;
+  border-color: $color-secundario !important;
+}
+
+.btn-success {
+  background-color: $color-acento-1 !important;
+  border-color: $color-acento-1 !important;
+}
+
+.btn-info {
+  background-color: $color-acento-2 !important;
+  border-color: $color-acento-2 !important;
+}
+
+.btn-light {
+  background-color: $color-acento-3 !important;
+  border-color: $color-acento-3 !important;
 }

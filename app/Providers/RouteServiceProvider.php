@@ -35,6 +35,10 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            // Load module routes for Cirugías
+            Route::middleware('web')
+                ->group(base_path('Modules/Cirugias/Routes/web.php'));
         });
     }
 }

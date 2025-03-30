@@ -1,4 +1,4 @@
-// Global styles for both custom sidebar and topbar compoments
+// Global styles for both custom sidebar and topbar components
 
 .sidebar,
 .topbar {
@@ -15,6 +15,7 @@
           font-weight: 900;
           content: '\f105';
           font-family: 'Font Awesome 5 Free';
+          color: $color-acento-1; // Updated color
         }
       }
       &.show {

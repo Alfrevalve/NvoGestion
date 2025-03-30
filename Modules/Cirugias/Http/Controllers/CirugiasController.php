@@ -16,6 +16,10 @@ class CirugiasController extends Controller
     public function track($id)
     {
         // Logic to retrieve and return the real-time tracking information for the surgery
+        $trackingData = []; // Replace with actual logic to fetch tracking data
+        // Example: $trackingData = RealTimeTrackingService::getTrackingData($id);
+        $trackingData = []; // Replace with actual logic to fetch tracking data
+        // Example: $trackingData = RealTimeTrackingService::getTrackingData($id);
         return response()->json([
             'message' => 'Tracking information for surgery ID ' . $id,
             // Add additional tracking data here
@@ -38,7 +42,7 @@ class CirugiasController extends Controller
         ]);
 
         // Logic to update the status of the surgery
-        // Example: Cirugia::find($id)->update(['status' => $request->status]);
+        Cirugia::find($id)->update(['status' => $request->status]); // Update the status in the database
 
         return response()->json([
             'message' => 'Status updated for surgery ID ' . $id,

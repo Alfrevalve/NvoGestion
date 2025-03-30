@@ -266,4 +266,36 @@ class CirugiaController extends Controller
             return back()->with('error', 'Error al cargar el formulario de creación.');
         }
     }
+
+    // Implementing the store method
+    public function store(Request $request)
+    {
+        try {
+            // Validate the incoming request data
+            Log::info('Datos recibidos para la creación de cirugía: ', $request->all());
+            $validatedData = $request->validate([
+                'fecha' => 'required|date',
+                'hora' => 'required|date_format:H:i',
+                'institucion_id' => 'required|exists:instituciones,id',
+                'medico_id' => 'required|exists:medicos,id',
+                'instrumentista_id' => 'required|exists:instrumentistas,id',
+                'equipo_id' => 'required|exists:equipos,id',
+                'tipo_cirugia' => 'required|string|max:255',
+                'estado' => 'required|string',
+                'duracion_estimada' => 'nullable|integer',
+                'prioridad' => 'required|string',
+                'observaciones' => 'nullable|string',
+            ]);
+
+            // Create a new Cirugia record
+            $cirugia = Cirugia::create($validatedData);
+            Log::info('Cirugía creada exitosamente: ', $cirugia->toArray());
+
+            // Return a success response
+            return redirect()->route('modulo.cirugias.index')->with('success', 'Cirugía creada correctamente.');
+        } catch (Throwable $e) {
+            Log::error('Error en CirugiaController@store: ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+            return back()->withInput()->with('error', 'Error al crear la cirugía: ' . $e->getMessage());
+        }
+    }
 }

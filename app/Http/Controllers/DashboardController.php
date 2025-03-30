@@ -10,6 +10,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        // Obtener el usuario actual y su rol
+        $user = auth()->user();
+        $userRole = $user->roles->first()->name ?? 'usuario';
+
         // Estadísticas de Equipos
         $totalEquipos = $this->getTotalEquipos();
 
@@ -29,22 +33,11 @@ class DashboardController extends Controller
         // Estadísticas de Despacho
         $despachosPendientes = $this->getDespachosPendientes();
 
-        // Eventos del Calendario
-        $eventos = $this->getEventosCalendario();
+        // Eventos del Calendario - Personalizado según el rol
+        $eventos = $this->getEventosCalendario($userRole);
 
-        // Actividades Recientes
-        $actividades = Actividad::with('user')
-            ->latest()
-            ->take(10)
-            ->get()
-            ->map(function ($actividad) {
-                return [
-                    'titulo' => $actividad->descripcion,
-                    'descripcion' => $actividad->detalles,
-                    'icono' => $this->getIconoActividad($actividad->tipo),
-                    'created_at' => $actividad->created_at
-                ];
-            });
+        // Actividades Recientes - Filtradas según el rol
+        $actividades = $this->getActividadesRecientes($userRole);
 
         return view('dashboard', compact(
             'totalEquipos',
@@ -122,13 +115,23 @@ class DashboardController extends Controller
         }
     }
 
-    private function getEventosCalendario()
+    private function getEventosCalendario($userRole = null)
     {
         try {
-            return app('Modules\Cirugias\Models\Cirugia')::with(['medico', 'institucion'])
+            $query = app('Modules\Cirugias\Models\Cirugia')::with(['medico', 'institucion'])
                 ->where('fecha', '>=', Carbon::now()->startOfMonth())
-                ->where('fecha', '<=', Carbon::now()->endOfMonth())
-                ->get()
+                ->where('fecha', '<=', Carbon::now()->endOfMonth());
+            
+            // Filtrar según el rol del usuario
+            if ($userRole == 'medico') {
+                // Para médicos, mostrar solo sus cirugías
+                $query->where('medico_id', auth()->user()->id);
+            } elseif ($userRole == 'instrumentista') {
+                // Para instrumentistas, mostrar cirugías asignadas
+                $query->where('instrumentista_id', auth()->user()->id);
+            }
+            
+            return $query->get()
                 ->map(function ($cirugia) {
                     return [
                         'id' => $cirugia->id,
@@ -172,6 +175,35 @@ class DashboardController extends Controller
         ][$prioridad] ?? 'secondary';
     }
 
+    private function getActividadesRecientes($userRole = null)
+    {
+        try {
+            $query = Actividad::with('user')->latest();
+            
+            // Filtrar por tipo de actividad según el rol
+            if ($userRole == 'medico' || $userRole == 'instrumentista') {
+                $query->where('tipo', 'cirugia');
+            } elseif ($userRole == 'almacenista') {
+                $query->where('tipo', 'inventario');
+            } elseif ($userRole == 'despachador') {
+                $query->where('tipo', 'despacho');
+            }
+            
+            return $query->take(10)
+                ->get()
+                ->map(function ($actividad) {
+                    return [
+                        'titulo' => $actividad->descripcion,
+                        'descripcion' => $actividad->detalles,
+                        'icono' => $this->getIconoActividad($actividad->tipo),
+                        'created_at' => $actividad->created_at
+                    ];
+                });
+        } catch (\Exception $e) {
+            return collect([]);
+        }
+    }
+    
     private function getIconoActividad($tipo)
     {
         return [

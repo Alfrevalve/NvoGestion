@@ -16,16 +16,24 @@ $gray-800: #5a5c69 !default;
 $gray-900: #3a3b45 !default;
 $black: #000 !default;
 
-$blue: #4e73df !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #e83e8c !default;
-$red: #e74a3b !default;
-$orange: #fd7e14 !default;
-$yellow: #f6c23e !default;
-$green: #1cc88a !default;
-$teal: #20c9a6 !default;
-$cyan: #36b9cc !default;
+$color-primario: #0F3061;
+$color-secundario: #0097CD;
+$color-acento-1: #65D7CA;
+$color-acento-2: #AAE9E2;
+$color-acento-3: #E5F8F6;
+
+$primary: $color-primario !default;
+$secondary: $color-secundario !default;
+$success: $color-acento-1 !default;
+$info: $color-acento-2 !default;
+$light: $color-acento-3 !default;
+
+$blue: $color-secundario !default;
+$indigo: $color-primario !default;
+$purple: $color-acento-1 !default;
+$teal: $color-acento-2 !default;
+$cyan: $color-acento-3 !default;
+
 
 // Custom Colors
 $brand-google: #ea4335;

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
-        events: [], // Cambiar esto para que los eventos se pasen desde la vista
+        events: eventos, // Eventos pasados desde la vista
         eventClick: function(info) {
             window.location.href = `/modulo-cirugias/${info.event.id}`;
         }

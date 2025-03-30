@@ -5,12 +5,11 @@ namespace Modules\Despacho\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Activitylog\Traits\LogsActivity;
-use Spatie\Activitylog\LogOptions;
+use App\Traits\RegistraActividad;
 
 class Despacho extends Model
 {
-    use HasFactory, SoftDeletes, LogsActivity;
+    use HasFactory, SoftDeletes, RegistraActividad;
 
     /**
      * La tabla asociada al modelo.
@@ -47,19 +46,6 @@ class Despacho extends Model
         'fecha_despacho' => 'datetime',
         'costo_envio' => 'float',
     ];
-
-    /**
-     * Configuración para el registro de actividad.
-     *
-     * @return LogOptions
-     */
-    public function getActivitylogOptions(): LogOptions
-    {
-        return LogOptions::defaults()
-            ->logOnly(['pedido_id', 'estado', 'fecha_despacho', 'destinatario', 'direccion', 'observaciones'])
-            ->logOnlyDirty()
-            ->dontSubmitEmptyLogs();
-    }
 
     /**
      * Relación con el modelo Pedido.
